@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Notes App</title>
+</head>
+<body>
+    <header>
+        <h1>Notes App</h1>
+        <span>Take notes and never forget</span>
+    </header>
+    <main class="notes">
+        <section class="notes__options">
+            <input id="search-text" type="text" placeholder="Filter notes">
+            <select id="filter-by">
+                <option value="byEdited">Sort by last edited</option>
+                <option value="byCreated">Sort by recently created</option>
+                <option value="alphabetical">Sort alphabetically</option>
+            </select>
+        </section>
+        <section class="notes__list">
+            <h2>Notes list: </h2>
+            <div class="list__container" id="notes"></div>
+        </section>
+        <button class="create-note" id="create-note">Create Note</button>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment-with-locales.min.js"></script>
+    <script src="./scripts/index-boundle.js"></script>
+</body>
+</html>

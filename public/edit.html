@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Notes App</title>
+</head>
+<body>
+    <header>
+        <h1>Notes App</h1>
+        <span>Take notes and never forget</span>
+    </header>
+    <main class="editing">
+        <h2>Editing page</h2>
+        <section class="editing__fields">
+            <input id="note-title" placeholder="Note title">
+            <textarea id="note-body" placeholder="Enter note text"></textarea>
+            <span class="editing__update-time" id="last-edited"></span>
+        </section>
+        <section class="editing__controls">
+            <a class="save-button" href="/index.html">SAVE</a>
+            <button class="remove-button" id="remove-note"></button>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment-with-locales.min.js"></script>
+    <script src="./scripts/edit-boundle.js"></script>
+</body>
+</html>

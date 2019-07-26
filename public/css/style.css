@@ -1,0 +1,357 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(255, 253, 251);
+}
+
+header{
+    background-color: black;
+    color: bisque;
+    font-size: 1.6em;
+    padding: 20px 50px;
+    border-bottom: 5px solid bisque;
+    box-shadow: 1px 1px 10px black;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
+    margin: 50px auto;
+}
+
+.notes__options{
+    margin-bottom: 20px;
+}
+
+input,
+select{
+    font-size: 1.7em;
+    padding: 5px;
+}
+
+.notes__list{
+    margin: 40px 0;
+    border-bottom: 5px solid black;
+}
+
+.notes__list h2{
+    padding: 0 10px;
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px; 
+    color: bisque;
+    background-color: black;
+}
+
+.list__container{
+    width: 100%;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.notes__controls{
+    width: 620px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center; 
+}
+
+.remove-button{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    color: rgb(255, 5, 5);
+    font-size: 1.7em;;
+    border: none;
+    cursor: pointer;
+}
+.remove-button::before,
+.remove-button::after{
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: rgb(255, 5, 5);
+    width: 30px;
+    height: 4px;
+    left: 5px;
+    top: 18px;
+}
+.remove-button::before{
+    transform: rotate(50deg);
+}
+.remove-button::after{
+    transform: rotate(-50deg);
+}
+
+.edit-button,
+.save-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    height: 40px;
+    width: 120px;
+    color: rgb(251, 255, 0);
+    font-size: 1.7em;
+    background-color: black;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+.save-button{
+    margin-right: 10px;
+    color: yellowgreen;
+}
+
+.note__text{
+    margin-bottom: 10px;
+    margin-right: auto;
+    padding: 0 10px;
+    font-size: 2.5em;
+    color: bisque;
+    background-color: black;
+    border-bottom: 5px solid bisque;
+    box-shadow: 1px 1px 10px black;
+}
+
+.create-note{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 180px;
+    color: yellowgreen;
+    font-size: 1.7em;
+    background-color: black;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.editing h2{
+    padding: 15px;
+    font-size: 2.7em;
+    color: bisque;
+    background-color: black;
+}
+
+.editing__fields{
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.editing__fields input{
+    width: 600px;
+}
+
+.editing__fields textarea{
+    margin: 10px 0;
+    width: 70vw;
+    height: 50vh;
+    font-size: 1.7em;
+    padding: 5px;
+}
+
+.editing__update-time{
+    font-size: 1.3em;
+    color: rgba(0, 0, 0, 0.52);
+}
+
+.editing__controls{
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px){
+    header{
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .notes__options{
+        margin: 10px auto;
+        text-align: center;
+    }
+    
+    input,
+    select{
+        margin: 5px auto;
+        font-size: 1.2em;
+        padding: 5px;
+    }
+    
+    main{
+        box-sizing: border-box;
+        width: 100vw;
+        margin: 20px auto;
+    }
+    .notes__list{
+        margin: 10px auto;
+        border-bottom: 5px solid black;
+    }
+    .notes__list h2{
+        font-size: 2em;
+    }
+    
+    .list__container{
+        margin-bottom: 20px;
+    }
+    
+    .notes__controls{
+        width: 100vw;
+        align-items: flex-start;
+    }
+    .note__text{
+        margin-bottom: 10px;
+        padding: 0 10px;
+        font-size: 1.5em;
+    }
+    .edit-button{
+        width: 40px;
+        height: 38px;
+        border: 1px solid black;
+        font-size: 0;
+        background: url(../icons/pencil-icon.png) no-repeat 50% 50%;
+        background-color: black;
+        background-size: contain;
+    }
+
+    .editing h2{
+        font-size: 1.6em;
+        margin-right: auto;
+    }
+    .editing__fields{
+        margin: 20px 0;
+    }
+    .editing__fields input{
+        width: 70vw;
+    }
+    .editing textarea{
+        width: 90vw;
+        height: 25vh;
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    header{
+        font-size: 1.2em;
+        padding: 10px 20px;
+    }
+    
+    input,
+    select{
+        margin: 5px auto;
+        font-size: 1.2em;
+        padding: 5px;
+    }
+    
+    main{
+        box-sizing: border-box;
+        width: 100vw;
+        margin: 20px auto;
+    }
+    .notes__list{
+        width: 90vw;
+        margin: 10px auto;
+        border-bottom: 5px solid black;
+    }
+    .notes__list h2{
+        font-size: 2.5em;
+    }
+    
+    .notes__controls{
+        width: 100%;
+        align-items: flex-start;
+    }
+    .note__text{
+        margin-bottom: 10px;
+        padding: 0 10px;
+        font-size: 2em;
+    }
+    .edit-button{
+        width: 80px;
+        height: 38px;
+        border: 1px solid black;
+    }
+
+    .editing h2{
+        font-size: 2em;
+    }
+    .editing__fields{
+        margin: 20px 0;
+    }
+    .editing__fields input{
+        width: 70vw;
+        font-size: 2em;
+    }
+    .editing textarea{
+        width: 90vw;
+        height: 25vh;
+        font-size: 2em;
+    }
+}
+
+@media only screen and (min-width : 1224px) and (max-device-width : 1600px) {
+    header{
+        font-size: 1.2em;
+        padding: 10px 20px;
+    }
+    
+    main{
+        box-sizing: border-box;
+        width: 100vw;
+        margin: 20px auto;
+    }
+    .notes__list{
+        width: 60vw;
+        margin: 10px auto;
+        border-bottom: 5px solid black;
+    }
+    .notes__list h2{
+        font-size: 2.5em;
+    }
+    
+    .notes__controls{
+        width: 100%;
+        align-items: flex-start;
+    }
+    .note__text{
+        margin-bottom: 10px;
+        padding: 0 10px;
+        font-size: 2em;
+    }
+
+    .edit-button{
+        width: 80px;
+        height: 38px;
+        border: 1px solid black;
+    }
+
+    .editing h2{
+        font-size: 2.5em;
+        margin-right: auto;
+    }
+    .editing__fields{
+        margin: 20px 0;
+    }
+    .editing__fields input{
+        width: 70vw;
+        font-size: 2em;
+    }
+    .editing textarea{
+        width: 90vw;
+        height: 25vh;
+        font-size: 2em;
+    }
+}
+
